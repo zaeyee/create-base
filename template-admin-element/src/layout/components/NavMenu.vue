@@ -1,0 +1,13 @@
+<template>
+  <el-menu :default-active="$route.path" router>
+    <NavMenuItem v-for="menu in menus" :key="menu.path" :menu="menu" :base-path="menu.path" />
+  </el-menu>
+</template>
+
+<script setup>
+import NavMenuItem from './NavMenuItem.vue'
+import { useUserStore } from '@/store/user'
+
+const userStore = useUserStore()
+const menus = userStore.accessRoutes
+</script>

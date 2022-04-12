@@ -1,0 +1,257 @@
+// 通用样式
+@use 'sass:math';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', sans-serif;
+  font-size: 14px;
+  line-height: 1.4286;
+  color: #333;
+  background: #fff;
+  /* stylelint-disable-next-line value-keyword-case */
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+}
+
+button,
+input[type='button'],
+input[type='submit'],
+input[type='radio'],
+input[type='checkbox'] {
+  cursor: pointer;
+}
+
+.c-bold {
+  font-weight: bold;
+}
+
+.c-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.c-text-left {
+  text-align: left;
+}
+
+.c-text-center {
+  text-align: center;
+}
+
+.c-text-right {
+  text-align: right;
+}
+
+.c-clear-fix {
+  zoom: 1;
+
+  &::after {
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    content: '';
+  }
+}
+
+.c-container {
+  position: relative;
+  width: 85%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+@media (max-width: 1300px) {
+  .c-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 991px) {
+  .c-container {
+    width: 98%;
+  }
+}
+
+@media (max-width: 767px) {
+  .c-container {
+    width: 100%;
+  }
+}
+
+/* ---flex布局 Begin--- */
+.c-flex {
+  position: relative;
+  display: flex;
+}
+
+.c-inline-flex {
+  position: relative;
+  display: inline-flex;
+}
+
+.c-wrap {
+  flex-wrap: wrap;
+}
+
+.c-row {
+  flex-direction: row;
+}
+
+.c-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.c-column {
+  flex-direction: column;
+}
+
+.c-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.c-justify-start {
+  justify-content: flex-start;
+}
+
+.c-justify-center {
+  justify-content: center;
+}
+
+.c-justify-end {
+  justify-content: flex-end;
+}
+
+.c-justify-between {
+  justify-content: space-between;
+}
+
+.c-justify-around {
+  justify-content: space-around;
+}
+
+.c-justify-evenly {
+  justify-content: space-evenly;
+}
+
+.c-align-start {
+  align-items: flex-start;
+}
+
+.c-align-center {
+  align-items: center;
+}
+
+.c-align-end {
+  align-items: flex-end;
+}
+
+.c-align-baseline {
+  align-items: baseline;
+}
+
+.c-align-stretch {
+  align-items: stretch;
+}
+
+.c-flex-1 {
+  flex: 1;
+}
+
+.c-flex-none {
+  flex: none;
+}
+
+[class*='c-col-'] {
+  float: left;
+}
+
+.c-col-0 {
+  display: none;
+}
+
+@for $i from 0 through 24 {
+  .c-col-#{$i} {
+    flex: 0 0 (math.div(1, 24) * $i * 100) * 1%;
+    max-width: (math.div(1, 24) * $i * 100) * 1%;
+  }
+
+  .c-col-offset-#{$i} {
+    margin-left: (math.div(1, 24) * $i * 100) * 1%;
+  }
+
+  .c-col-pull-#{$i} {
+    position: relative;
+    right: (math.div(1, 24) * $i * 100) * 1%;
+  }
+
+  .c-col-push-#{$i} {
+    position: relative;
+    left: (math.div(1, 24) * $i * 100) * 1%;
+  }
+}
+
+/* ---flex布局 End--- */
+
+/* ---常用边距Begin--- */
+@each $pixel in (0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 40, 50, 60, 70, 80, 90, 100) {
+  // 四周外边距，例：m-10 距离四周10px
+  .m-#{$pixel} {
+    margin: #{$pixel}px !important;
+  }
+
+  // 四周内边距，例：p-10 距离四周10px
+  .p-#{$pixel} {
+    padding: #{$pixel}px !important;
+  }
+
+  @each $side in (top, right, bottom, left) {
+    // 指定方位外边距，例：m-t-10 距离顶部10px
+    .m-#{str-slice($side, 0, 1)}-#{$pixel} {
+      margin-#{$side}: #{$pixel}px !important;
+    }
+
+    // 指定方位内边距，例：p-t-10 距离顶部10px
+    .p-#{str-slice($side, 0, 1)}-#{$pixel} {
+      padding-#{$side}: #{$pixel}px !important;
+    }
+  }
+}
+
+/* ---常用边距End--- */
+
+/* ---字体大小Begin */
+@each $size in (12, 13, 14, 15, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40) {
+  .f-s-#{$size} {
+    font-size: #{$size}px !important;
+  }
+}
+
+/* ---字体大小End--- */

@@ -1,0 +1,43 @@
+{
+  "name": "create-base",
+  "version": "1.0.0",
+  "description": "快速构建项目基础框架，支持vue/uni-app/后台管理模板等",
+  "keywords": [
+    "create-base",
+    "vue",
+    "uni-app"
+  ],
+  "bin": {
+    "create-base": "index.js",
+    "cb": "index.js"
+  },
+  "files": [
+    "index.js",
+    "template-*"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "author": "zaeyee",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaeyee/create-base.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zaeyee/create-base/issues"
+  },
+  "homepage": "https://github.com/zaeyee/create-base#readme",
+  "dependencies": {
+    "kolorist": "^1.5.1",
+    "minimist": "^1.2.6",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2"
+  }
+}
