@@ -61,6 +61,7 @@ specifiers:
   stylelint-config-recommended-vue: ^1.1.0
   stylelint-config-standard: ^24.0.0
   stylelint-config-standard-scss: ^3.0.0
+  uni-io: ^1.0.1
   vue: ^2.6.14
   vue-template-compiler: ^2.6.14
   vuex: ^3.6.2
@@ -86,6 +87,7 @@ dependencies:
   '@vue/shared': registry.npmmirror.com/@vue/shared/3.2.31
   core-js: registry.npmmirror.com/core-js/3.21.1
   regenerator-runtime: registry.npmmirror.com/regenerator-runtime/0.12.1
+  uni-io: registry.npmmirror.com/uni-io/1.0.1
   vue: registry.npmmirror.com/vue/2.6.14
   vuex: registry.npmmirror.com/vuex/3.6.2_vue@2.6.14
 
@@ -14974,6 +14976,12 @@ packages:
       buffer: registry.npmmirror.com/buffer/5.7.1
       through: registry.npmmirror.com/through/2.3.8
     dev: true
+
+  registry.npmmirror.com/uni-io/1.0.1:
+    resolution: {integrity: sha512-wTQpYwPACTdrud3ARxxdyKrFpK5xLnqFJQzSjip9oFcDVqJ/aLdAfTOlSj5CDtmeFmB1DQma/mPvw6vDEFY8bg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/uni-io/-/uni-io-1.0.1.tgz}
+    name: uni-io
+    version: 1.0.1
+    dev: false
 
   registry.npmmirror.com/unicode-canonical-property-names-ecmascript/2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-2.0.0.tgz}
