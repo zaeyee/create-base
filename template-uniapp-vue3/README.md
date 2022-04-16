@@ -23,17 +23,17 @@
 ## 安装依赖包
 
 ```shell
-npm install
+pnpm install
 ```
 
 ### 启动开发服务器
 
 ```shell
-npm run serve
+pnpm dev:h5
 ```
 
 ### 为生产环境构建产物
 
 ```shell
-npm run build
+pnpm build
 ```
