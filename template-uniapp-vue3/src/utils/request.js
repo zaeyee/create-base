@@ -1,10 +1,10 @@
 import { createService } from 'uni-io'
-import { useUserStore } from '@/store/user'
-import { network } from '@/config/index'
+import { useUserStore } from '@/stores/user'
+import config from '@/config'
 
 const service = createService({
-  baseURL: network.baseURL,
-  timeout: network.timeout
+  baseURL: config.network.baseURL,
+  timeout: config.network.timeout
 })
 
 const userStore = useUserStore()

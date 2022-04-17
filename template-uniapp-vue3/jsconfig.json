@@ -4,7 +4,8 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["@dcloudio/types"]
+    "types": ["@dcloudio/types", "./auto-imports"],
+    "jsx": "preserve"
   },
   "exclude": ["node_modules", "dist"]
 }
