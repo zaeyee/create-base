@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { useUserStore } from '@/store/user'
+import { useUserStore } from '@/stores/user'
 import constantRoutes from './constant'
 
 const router = createRouter({

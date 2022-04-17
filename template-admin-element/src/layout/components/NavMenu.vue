@@ -1,6 +1,6 @@
 <script setup>
 import NavMenuItem from './NavMenuItem.vue'
-import { useUserStore } from '@/store/user'
+import { useUserStore } from '@/stores/user'
 
 const userStore = useUserStore()
 const menus = userStore.accessRoutes

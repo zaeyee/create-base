@@ -1,6 +1,6 @@
 <script setup>
 import { isAuth, isAuthSome, isAuthEvery } from '@/utils/auth'
-import { useUserStore } from '@/store/user'
+import { useUserStore } from '@/stores/user'
 
 const userStore = useUserStore()
 const loading = ref(false)

@@ -1,4 +1,3 @@
-import { defineStore } from 'pinia'
 import { login, getInfo } from '@/api/user'
 import { filterRoutes } from '@/utils/auth'
 import constantRoutes from '@/router/constant'

@@ -1,4 +1,4 @@
-import { useUserStore } from '@/store/user'
+import { useUserStore } from '@/stores/user'
 
 // 判断某路由是否有权限访问
 export const isRouteAuth = (permissions, route) => {
