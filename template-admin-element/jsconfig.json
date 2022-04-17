@@ -4,7 +4,8 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["element-plus/global", "./auto-imports", "./components"]
+    "types": ["element-plus/global", "./auto-imports", "./components"],
+    "jsx": "preserve"
   },
   "exclude": ["node_modules", "dist"]
 }
