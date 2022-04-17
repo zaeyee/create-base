@@ -5,7 +5,7 @@ specifiers:
   axios: ^0.26.1
   eslint: ^8.13.0
   eslint-config-prettier: ^8.5.0
-  eslint-plugin-prettier: ^3.4.1
+  eslint-plugin-prettier: ^4.0.0
   eslint-plugin-vue: ^8.6.0
   normalize.css: ^8.0.1
   pinia: ^2.0.13
@@ -37,7 +37,7 @@ devDependencies:
   '@vitejs/plugin-vue': 2.3.1_vite@2.9.5+vue@3.2.33
   eslint: 8.13.0
   eslint-config-prettier: 8.5.0_eslint@8.13.0
-  eslint-plugin-prettier: 3.4.1_1815ac95b7fb26c13c7d48a8eef62d0f
+  eslint-plugin-prettier: 4.0.0_1815ac95b7fb26c13c7d48a8eef62d0f
   eslint-plugin-vue: 8.6.0_eslint@8.13.0
   postcss: 8.4.12
   postcss-html: 1.4.1
@@ -815,13 +815,13 @@ packages:
       eslint: 8.13.0
     dev: true
 
-  /eslint-plugin-prettier/3.4.1_1815ac95b7fb26c13c7d48a8eef62d0f:
-    resolution: {integrity: sha512-htg25EUYUeIhKHXjOinK4BgCcDwtLHjqaxCDsMy5nbnUMkKFvIhMVCp+5GFUXQ4Nr8lBsPqtGAqBenbpFqAA2g==}
+  /eslint-plugin-prettier/4.0.0_1815ac95b7fb26c13c7d48a8eef62d0f:
+    resolution: {integrity: sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==}
     engines: {node: '>=6.0.0'}
     peerDependencies:
-      eslint: '>=5.0.0'
+      eslint: '>=7.28.0'
       eslint-config-prettier: '*'
-      prettier: '>=1.13.0'
+      prettier: '>=2.0.0'
     peerDependenciesMeta:
       eslint-config-prettier:
         optional: true
