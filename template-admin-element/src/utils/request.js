@@ -7,12 +7,11 @@ const service = axios.create({
   timeout: config.network.timeout
 })
 
-const userStore = useUserStore()
-
 // 请求拦截器
 service.interceptors.request.use(
   config => {
     // 请求前，附加token到headers上
+    const userStore = useUserStore()
     const token = userStore.token || localStorage.getItem('token')
     if (token) {
       config.headers['Authorization'] = token || ''
@@ -29,6 +28,7 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   response => {
     const { data } = response
+    const userStore = useUserStore()
     // 处理自定义响应状态码
     switch (data.code) {
       case 200:
