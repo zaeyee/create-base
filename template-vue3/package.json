@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^0.24.0",
+    "axios": "^0.26.1",
     "normalize.css": "^8.0.1",
     "pinia": "^2.0.13",
     "vue": "^3.2.33",
@@ -31,8 +31,8 @@
     "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-config-standard": "^24.0.0",
     "stylelint-config-standard-scss": "^3.0.0",
-    "unplugin-auto-import": "^0.5.11",
-    "unplugin-vue-components": "^0.17.21",
+    "unplugin-auto-import": "^0.7.1",
+    "unplugin-vue-components": "^0.19.3",
     "vite": "^2.9.5"
   }
 }
