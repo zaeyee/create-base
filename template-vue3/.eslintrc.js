@@ -3,7 +3,8 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    es6: true
+    es6: true,
+    'vue/setup-compiler-macros': true
   },
   parserOptions: {
     ecmaVersion: 2020,
@@ -15,7 +16,9 @@ module.exports = {
     // 使用 eslint-plugin-vue 推荐配置
     'plugin:vue/vue3-recommended',
     // eslint-config-prettier和eslint-plugin-prettier合并配置
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    // unplugin-auto-import 自动生成的配置
+    './.eslintrc-auto-import.json'
   ],
   rules: {
     // 关闭vue组件名称必须多单词的限制

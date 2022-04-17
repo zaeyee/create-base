@@ -3,7 +3,9 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "types": ["./auto-imports", "./components"],
+    "jsx": "preserve"
   },
   "exclude": ["node_modules", "dist"]
 }
