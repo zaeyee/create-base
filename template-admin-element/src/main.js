@@ -1,4 +1,3 @@
-import { createApp } from 'vue'
 import * as ElementIcons from '@element-plus/icons-vue'
 import App from './App.vue'
 import directives from './directives'

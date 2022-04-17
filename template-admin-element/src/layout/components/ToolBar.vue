@@ -1,3 +1,27 @@
+<script setup>
+import { useUserStore } from '@/store/user'
+
+const userStore = useUserStore()
+const router = useRouter()
+const route = useRoute()
+const reload = inject('reload')
+const profile = userStore.profile
+
+const userCommand = command => {
+  switch (command) {
+    case 'space':
+      break
+    // 退出登录
+    case 'logout':
+      ElMessageBox.confirm('是否确定退出登录？', '退出登录').then(() => {
+        userStore.logout()
+        router.push('/login?redirect' + route.fullPath)
+      })
+      break
+  }
+}
+</script>
+
 <template>
   <div class="tool-bar">
     <div class="tool-bar__item" @click="reload">
@@ -31,30 +55,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { useUserStore } from '@/store/user'
-
-const userStore = useUserStore()
-const router = useRouter()
-const route = useRoute()
-const reload = inject('reload')
-const profile = userStore.profile
-
-const userCommand = command => {
-  switch (command) {
-    case 'space':
-      break
-    // 退出登录
-    case 'logout':
-      ElMessageBox.confirm('是否确定退出登录？', '退出登录').then(() => {
-        userStore.logout()
-        router.push('/login?redirect' + route.fullPath)
-      })
-      break
-  }
-}
-</script>
 
 <style lang="scss">
 .tool-bar {

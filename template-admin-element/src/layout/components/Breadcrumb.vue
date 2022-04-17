@@ -1,11 +1,3 @@
-<template>
-  <el-breadcrumb>
-    <el-breadcrumb-item v-for="item in breadcrumbList" :key="item.path" :to="item">
-      {{ item.meta.title }}
-    </el-breadcrumb-item>
-  </el-breadcrumb>
-</template>
-
 <script setup>
 const route = useRoute()
 
@@ -33,3 +25,11 @@ watch(route, route => {
   initBreadcrumb()
 })
 </script>
+
+<template>
+  <el-breadcrumb>
+    <el-breadcrumb-item v-for="item in breadcrumbList" :key="item.path" :to="item">
+      {{ item.meta.title }}
+    </el-breadcrumb-item>
+  </el-breadcrumb>
+</template>

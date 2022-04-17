@@ -1,21 +1,3 @@
-<template>
-  <div class="de-layout">
-    <el-scrollbar class="de-layout__sidebar">
-      <NavMenu />
-    </el-scrollbar>
-    <div class="de-layout__container">
-      <div class="de-layout__header is-fixed">
-        <Hamburger class="c-flex-none" />
-        <Breadcrumb class="c-flex-1" />
-        <ToolBar class="c-flex-none" />
-      </div>
-      <div class="de-layout__main">
-        <router-view v-if="isRouterAlive"></router-view>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import NavMenu from './components/NavMenu.vue'
 import Hamburger from './components/Hamburger.vue'
@@ -34,6 +16,24 @@ const reload = () => {
 
 provide('reload', reload)
 </script>
+
+<template>
+  <div class="de-layout">
+    <el-scrollbar class="de-layout__sidebar">
+      <NavMenu />
+    </el-scrollbar>
+    <div class="de-layout__container">
+      <div class="de-layout__header is-fixed">
+        <Hamburger class="c-flex-none" />
+        <Breadcrumb class="c-flex-1" />
+        <ToolBar class="c-flex-none" />
+      </div>
+      <div class="de-layout__main">
+        <router-view v-if="isRouterAlive"></router-view>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 $sidebar-width: 260px;

@@ -1,19 +1,3 @@
-<template>
-  <div v-if="!menu.meta || !menu.meta.hidden">
-    <el-menu-item v-if="onlyItem" :index="resolvePath(onlyItem.path)">
-      <SvgIcon :name="onlyItem.meta.icon" />
-      <span>{{ onlyItem.meta.title }}</span>
-    </el-menu-item>
-    <el-sub-menu v-else :index="resolvePath(menu.path)">
-      <template v-if="menu.meta" #title>
-        <SvgIcon :name="menu.meta.icon" />
-        <span>{{ menu.meta.title }}</span>
-      </template>
-      <NavMenuItem v-for="child in menu.children" :key="child.path" :menu="child" :base-path="basePath" />
-    </el-sub-menu>
-  </div>
-</template>
-
 <script setup>
 import { resolve as pathResolve } from 'path-browserify'
 import { isExternal } from '@/utils/validator'
@@ -54,3 +38,19 @@ const resolvePath = menuPath => {
   return pathResolve(props.basePath, menuPath)
 }
 </script>
+
+<template>
+  <div v-if="!menu.meta || !menu.meta.hidden">
+    <el-menu-item v-if="onlyItem" :index="resolvePath(onlyItem.path)">
+      <SvgIcon :name="onlyItem.meta.icon" />
+      <span>{{ onlyItem.meta.title }}</span>
+    </el-menu-item>
+    <el-sub-menu v-else :index="resolvePath(menu.path)">
+      <template v-if="menu.meta" #title>
+        <SvgIcon :name="menu.meta.icon" />
+        <span>{{ menu.meta.title }}</span>
+      </template>
+      <NavMenuItem v-for="child in menu.children" :key="child.path" :menu="child" :base-path="basePath" />
+    </el-sub-menu>
+  </div>
+</template>

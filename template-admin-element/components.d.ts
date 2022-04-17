@@ -4,6 +4,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Auth: typeof import('./src/components/Auth.vue')['default']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElBadge: typeof import('element-plus/es')['ElBadge']
     ElBreadcrumb: typeof import('element-plus/es')['ElBreadcrumb']
@@ -27,4 +28,4 @@ declare module 'vue' {
   }
 }
 
-export {}
+export { }

@@ -1,9 +1,3 @@
-<template>
-  <div class="hamburger" :class="{ 'is-active': isActive }" @click="toggle">
-    <SvgIcon name="i-ep-fold" :size="20" />
-  </div>
-</template>
-
 <script setup>
 defineProps({
   isActive: {
@@ -18,6 +12,12 @@ const toggle = () => {
   emit('toggle')
 }
 </script>
+
+<template>
+  <div class="hamburger" :class="{ 'is-active': isActive }" @click="toggle">
+    <SvgIcon name="i-ep-fold" :size="20" />
+  </div>
+</template>
 
 <style lang="scss">
 .hamburger {
