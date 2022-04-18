@@ -1,10 +1,8 @@
 // 通用样式
 @use 'sass:math';
 
-#app {
-  font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', sans-serif;
+page {
   font-size: 28rpx;
-  line-height: 1.4286;
   color: #333;
   background: #fff;
   /* stylelint-disable-next-line value-keyword-case */
@@ -12,6 +10,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
+}
+
+#app {
+  font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', sans-serif;
 }
 
 .c-hover {
