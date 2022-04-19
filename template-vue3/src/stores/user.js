@@ -1,6 +1,6 @@
 export const useUserStore = defineStore('user', {
   state: () => ({
-    token: ''
+    token: localStorage.getItem('token') || ''
   }),
   getters: {
     hasToken: state => !!state.token
