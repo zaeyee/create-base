@@ -15,7 +15,7 @@ const userCommand = command => {
     case 'logout':
       ElMessageBox.confirm('是否确定退出登录？', '退出登录').then(() => {
         userStore.logout()
-        router.push('/login?redirect' + route.fullPath)
+        router.push('/login?redirect=' + route.fullPath)
       })
       break
   }

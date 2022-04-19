@@ -38,7 +38,7 @@ router.beforeEach(async (to, from, next) => {
           // 获取用户信息失败，则退出登录后重定向到登录页
           ElMessageBox.alert(error)
           userStore.logout()
-          next('/login?redirect' + to.fullPath)
+          next('/login?redirect=' + to.fullPath)
         }
       }
     }
@@ -51,7 +51,7 @@ router.beforeEach(async (to, from, next) => {
       next()
     } else {
       // 其他没有访问权限的页面，则重定向到登录页
-      next('/login?redirect' + to.fullPath)
+      next('/login?redirect=' + to.fullPath)
     }
   }
 })
