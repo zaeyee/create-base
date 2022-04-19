@@ -5,7 +5,7 @@ import asyncRoutes from '@/router/async'
 
 export const useUserStore = defineStore('user', {
   state: () => ({
-    token: '',
+    token: localStorage.getItem('token') || '',
     profile: {},
     permissions: [],
     accessRoutes: []
