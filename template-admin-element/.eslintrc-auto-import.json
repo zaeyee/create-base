@@ -12,7 +12,6 @@
     "EffectScope": true,
     "ElMessage": true,
     "ElMessageBox": true,
-    "ElNotification": true,
     "getActivePinia": true,
     "getCurrentInstance": true,
     "getCurrentScope": true,
