@@ -87,6 +87,7 @@ const checkAuthEvery = permissions => {
       </Auth>
     </div>
 
+    <!-- TODO: unplugin-vue-components的bug导致组件名和指令名不可重复，待修复 -->
     <h3>鉴权指令（请对照代码查看）</h3>
     <p v-auth="'admin'">如果你有 admin 权限则能看到这句话</p>
     <p v-auth="'editor'">如果你有 editor 权限则能看到这句话</p>
