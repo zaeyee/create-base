@@ -6,7 +6,7 @@ const path = require('path')
 // non associated with an option ( _ ) needs to be parsed as a string.
 const argv = require('minimist')(process.argv.slice(2), { string: ['_'] })
 const prompts = require('prompts')
-const { yellow, green, cyan, blue, magenta, red, reset } = require('kolorist')
+const { yellow, green, cyan, blue, gray, magenta, red, reset } = require('kolorist')
 
 const cwd = process.cwd()
 
@@ -22,6 +22,10 @@ const FRAMEWORKS = [
       {
         name: 'vue3',
         color: blue
+      },
+      {
+        name: 'vue3-ts',
+        color: gray
       }
     ]
   },
