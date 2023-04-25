@@ -1,10 +1,10 @@
 import axios from 'axios'
-import config from '@/config'
+import { network } from '@/config'
 import { useUserStore } from '@/stores/user'
 
 const service = axios.create({
-  baseURL: config.network.baseURL,
-  timeout: config.network.timeout
+  baseURL: network.baseURL,
+  timeout: network.timeout
 })
 
 // 请求拦截器
@@ -36,10 +36,10 @@ service.interceptors.response.use(
         return data
       case 401:
         // 处理token无效情况
-        userStore.logout()
+        userStore.clear()
         console.log('token无效')
         break
-      case 500:
+      default:
         // 处理服务器错误情况
         console.log('服务器错误')
         break

@@ -1,9 +1,8 @@
 import App from './App.vue'
 import router from './router'
 
-import 'normalize.css' // CSS重置方案
-import 'uno.css' // UnoCSS
-import './style.css'
+import '@unocss/reset/tailwind-compat.css'
+import 'uno.css'
 
 const app = createApp(App)
 const pinia = createPinia()

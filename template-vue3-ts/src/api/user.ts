@@ -1,4 +1,4 @@
+import type { UserModel, LoginResponse } from '@/types/user'
 import request from '@/utils/request'
 
-// 用户登录
-export const login = (data: unknown) => request.post('/login', data)
+export const login = (data: UserModel): Promise<LoginResponse> => request.post('/login', data)
