@@ -1,14 +1,12 @@
 export const useUserStore = defineStore('user', {
   state: () => ({
-    token: ''
+    token: uni.getStorageSync('token'),
+    profile: {}
   }),
-  getters: {
-    hasToken: state => !!state.token
-  },
   actions: {
-    // 退出登录
-    logout() {
-      this.token = ''
+    // 清除数据
+    clear() {
+      this.$reset()
       uni.removeStorageSync('token')
     }
   }

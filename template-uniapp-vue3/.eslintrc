@@ -1,0 +1,12 @@
+{
+  "root": true,
+  "globals": {
+    "uni": "readonly"
+  },
+  "extends": [
+    "@unocss",
+    "@zaeyee/eslint-config-vue",
+    // unplugin-auto-import 自动生成的配置
+    "./.eslintrc-auto-import.json"
+  ]
+}
