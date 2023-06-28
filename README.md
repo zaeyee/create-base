@@ -59,4 +59,5 @@ pnpm create base base-vue-app -- --template vue
 - `vue3-ts`：基于 vite+vue3+typescript 的模板（更新中）
 - `uniapp`：基于 webpack+vue2 的 uni-app 模板（暂搁置）
 - `uniapp-vue3`：基于 vite+vue3 的 uni-app 模板（更新中）
-- `admin-element`：基于 vite+vue3+Element-plus 的管理后台模板（更新中）
+- `uniapp-vue3-ts`：基于 vite+vue3+typescript 的 uni-app 模板（更新中）
+- `admin-element`：基于 vite+vue3+Element-plus 的管理后台模板（暂搁置）
