@@ -16,7 +16,7 @@
   "easycom": {
     "autoscan": true,
     "custom": {
-      "^c-(.*)": "@/components/common/c-$1.vue"
+      "^c-(.*)": "@/components/c-$1.vue"
     }
   }
 }
