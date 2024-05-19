@@ -12,7 +12,7 @@ export default defineConfig({
     }
   },
   plugins: [
-    uni(),
+    uni.default(),
     AutoImport({
       imports: ['vue', 'pinia', 'uni-app'],
       dts: true,

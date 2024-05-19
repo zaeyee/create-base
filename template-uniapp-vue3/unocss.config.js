@@ -1,21 +1,6 @@
-import { defineConfig, presetAttributify } from 'unocss'
-import { presetApplet, presetRemRpx, transformerApplet, transformerAttributify } from 'unocss-applet'
-
-const isApplet = process.env?.UNI_PLATFORM?.startsWith('mp-') ?? false
-
-const presets = []
-const transformers = []
-
-if (isApplet) {
-  presets.push(presetApplet({ preflight: false }))
-  presets.push(presetRemRpx())
-  transformers.push(transformerAttributify({ ignoreAttributes: ['block'] }))
-  transformers.push(transformerApplet())
-} else {
-  presets.push(presetApplet({ preflight: false }))
-  presets.push(presetAttributify())
-  presets.push(presetRemRpx({ mode: 'rpx2rem' }))
-}
+import { defineConfig } from 'unocss'
+import presetWeapp from 'unocss-preset-weapp'
+import { transformerClass } from 'unocss-preset-weapp/transformer'
 
 export default defineConfig({
   theme: {
@@ -28,6 +13,6 @@ export default defineConfig({
       info: 'var(--c-info)'
     }
   },
-  presets,
-  transformers
+  presets: [presetWeapp({ whRpx: false })],
+  transformers: [transformerClass()]
 })

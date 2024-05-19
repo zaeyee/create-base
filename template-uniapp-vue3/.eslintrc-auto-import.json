@@ -82,6 +82,22 @@
     "useCssVars": true,
     "useSlots": true,
     "watch": true,
-    "watchEffect": true
+    "watchEffect": true,
+    "Component": true,
+    "ComponentPublicInstance": true,
+    "ComputedRef": true,
+    "ExtractDefaultPropTypes": true,
+    "ExtractPropTypes": true,
+    "ExtractPublicPropTypes": true,
+    "InjectionKey": true,
+    "PropType": true,
+    "Ref": true,
+    "VNode": true,
+    "WritableComputedRef": true,
+    "isProxy": true,
+    "isReactive": true,
+    "toValue": true,
+    "watchPostEffect": true,
+    "watchSyncEffect": true
   }
 }
