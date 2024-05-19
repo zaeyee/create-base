@@ -1,18 +1,21 @@
 # create-base
 
-## 快速构建项目基础框架，支持 vue/uni-app/后台管理[模板](#当前支持的模板)等
+## 快速构建项目基础框架，支持 vue/uni-app[模板](#当前支持的模板)
 
 > 声明：本工具主要源码来源于[create-vite](https://github.com/vitejs/vite/tree/main/packages/create-vite)
 
-### 预置工具
+### 仍在更新的模板
 
-- sass
-- eslint 及相关配置
-- stylelint 及相关配置
-- prettier 及相关配置
-- postcss 及相关配置
+- `vue3`：基于 vite+vue3 的模板
+- `vue3-ts`：基于 vite+vue3+typescript 的模板
+- `uniapp-vue3`：基于 vite+vue3 的 uni-app 模板
+- `uniapp-vue3-ts`：基于 vite+vue3+typescript 的 uni-app 模板
 
-具体查看对应模板下的 README.md
+### 不再支持的模板
+
+- `vue`：基于 webpack+vue2 的模板
+- `uniapp`：基于 webpack+vue2 的 uni-app 模板
+- `admin-element`：基于 vite+vue3+Element-plus 的管理后台模板
 
 ### 使用方法
 
@@ -40,27 +43,14 @@ pnpm create base
 
 ```bash
 # npm 6.x
-npm create base@latest base-vue-app --template vue
+npm create base@latest base-vue-app --template vue3
 
 # npm 7+，需要额外的双破折号：
-npm create base@latest base-vue-app -- --template vue
+npm create base@latest base-vue-app -- --template vue3
 
 # yarn
-yarn create base base-vue-app --template vue
+yarn create base base-vue-app --template vue3
 
 # pnpm
-pnpm create base base-vue-app -- --template vue
+pnpm create base base-vue-app -- --template vue3
 ```
-
-### 仍在更新的模板
-
-- `vue3`：基于 vite+vue3 的模板
-- `vue3-ts`：基于 vite+vue3+typescript 的模板
-- `uniapp-vue3`：基于 vite+vue3 的 uni-app 模板
-- `uniapp-vue3-ts`：基于 vite+vue3+typescript 的 uni-app 模板
-
-### 不再支持的模板
-
-- `vue`：基于 webpack+vue2 的模板
-- `uniapp`：基于 webpack+vue2 的 uni-app 模板
-- `admin-element`：基于 vite+vue3+Element-plus 的管理后台模板
