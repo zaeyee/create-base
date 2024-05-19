@@ -15,7 +15,7 @@ const FRAMEWORKS = [
     name: 'vue',
     color: green,
     variants: [
-      { name: 'vue', color: gray },
+      // { name: 'vue', color: gray },
       { name: 'vue3', color: cyan },
       { name: 'vue3-ts', color: magenta }
     ]
@@ -24,16 +24,16 @@ const FRAMEWORKS = [
     name: 'uniapp',
     color: yellow,
     variants: [
-      { name: 'uniapp', color: gray },
+      // { name: 'uniapp', color: gray },
       { name: 'uniapp-vue3', color: cyan },
       { name: 'uniapp-vue3-ts', color: magenta }
     ]
-  },
-  {
-    name: 'admin',
-    color: blue,
-    variants: [{ name: 'admin-element', color: gray }]
   }
+  // {
+  //   name: 'admin',
+  //   color: blue,
+  //   variants: [{ name: 'admin-element', color: gray }]
+  // }
 ]
 
 const TEMPLATES = FRAMEWORKS.map(f => (f.variants && f.variants.map(v => v.name)) || [f.name]).reduce(
