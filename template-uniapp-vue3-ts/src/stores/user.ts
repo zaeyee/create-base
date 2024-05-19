@@ -11,10 +11,9 @@ export const useUserStore = defineStore('user', {
     profile: {} as UserRow
   }),
   actions: {
-    // 清除数据
     clear() {
-      this.$reset()
       uni.removeStorageSync('token')
+      this.$reset()
     }
   }
 })

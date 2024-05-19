@@ -13,21 +13,3 @@
 > - [Prettier](https://prettier.io/)：格式化代码
 > - [@unocss/eslint-config](https://github.com/unocss/unocss/tree/main/packages/eslint-config#readme)：UnoCSS 的 ESLint 配置
 > - [@zaeyee/eslint-config](https://github.com/zaeyee/eslint-config)：Zaeyee 的 ESLint + Prettier 配置（Vue + TS）
-
-## 安装依赖包
-
-```shell
-pnpm install
-```
-
-### 启动开发服务器
-
-```shell
-pnpm dev:h5
-```
-
-### 为生产环境构建产物
-
-```shell
-pnpm build
-```

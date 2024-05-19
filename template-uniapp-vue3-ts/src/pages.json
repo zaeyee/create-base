@@ -8,14 +8,13 @@
   "pages": [
     {
       "path": "pages/index",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
+      "style": { "navigationBarTitleText": "uni-app" }
     }
   ],
   "easycom": {
     "autoscan": true,
     "custom": {
+      "^b-(.*)": "@/components/b-$1.vue",
       "^c-(.*)": "@/components/c-$1.vue"
     }
   }

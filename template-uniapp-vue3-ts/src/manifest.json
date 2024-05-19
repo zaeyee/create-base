@@ -56,7 +56,8 @@
       "ignoreDevUnusedFiles": false,
       "ignoreUploadUnusedFiles": false
     },
-    "usingComponents": true
+    "usingComponents": true,
+    "mergeVirtualHostAttributes": true
   },
   "mp-alipay": {
     "usingComponents": true
