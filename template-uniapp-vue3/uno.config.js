@@ -5,12 +5,11 @@ import { transformerClass } from 'unocss-preset-weapp/transformer'
 export default defineConfig({
   theme: {
     colors: {
-      primary: 'var(--c-primary)',
-      primaryThin: 'var(--c-primary-thin)',
-      success: 'var(--c-success)',
-      warning: 'var(--c-warning)',
-      danger: 'var(--c-danger)',
-      info: 'var(--c-info)'
+      primary: '#089bff',
+      success: '#1fc819',
+      warning: '#f0a020',
+      danger: '#f85757',
+      info: '#9e9fa2'
     }
   },
   presets: [presetWeapp({ whRpx: false })],
