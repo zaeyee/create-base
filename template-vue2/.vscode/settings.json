@@ -1,0 +1,26 @@
+{
+  "editor.tabSize": 2,
+  "editor.rulers": [120],
+  "editor.formatOnSave": true, //保存时自动格式化
+  "editor.defaultFormatter": "esbenp.prettier-vscode", //格式化全交给prettier处理
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true, //保存时eslint自动修复
+    "source.fixAll.stylelint": true //保存时estylelint自动修复
+  },
+  /* ---prettier配置Begin--- */
+  "prettier.printWidth": 120,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.arrowParens": "avoid",
+  /* ---prettier配置End--- */
+  /* ---eslint配置Begin--- */
+  "eslint.run": "onType",
+  "eslint.options": {
+    "extensions": [".js", ".vue"]
+  },
+  "eslint.validate": ["html", "javascript", "vue"]
+  /* ---eslint配置End--- */
+}

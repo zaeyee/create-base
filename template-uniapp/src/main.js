@@ -1,13 +1,17 @@
-import Vue from 'vue'
-import App from './App'
-import store from './store'
+import { createSSRApp } from 'vue'
+import App from './App.vue'
+import * as Pinia from 'pinia'
 
-Vue.config.productionTip = false
+import 'uno.css'
 
-App.mpType = 'app'
+export function createApp() {
+  const app = createSSRApp(App)
+  const pinia = createPinia()
 
-const app = new Vue({
-  store,
-  ...App
-})
-app.$mount()
+  app.use(pinia)
+
+  return {
+    app,
+    Pinia
+  }
+}

@@ -4,23 +4,28 @@
   "editor.formatOnSave": true, //保存时自动格式化
   "editor.defaultFormatter": "esbenp.prettier-vscode", //格式化全交给prettier处理
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true, //保存时eslint自动修复
-    "source.fixAll.stylelint": true //保存时estylelint自动修复
+    "source.fixAll": true // 保存时lint自动修复
   },
   /* ---prettier配置Begin--- */
-  "prettier.printWidth": 120,
-  "prettier.tabWidth": 2,
-  "prettier.useTabs": false,
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "none",
-  "prettier.arrowParens": "avoid",
+  "prettier.semi": false, // 行尾不加分号
+  "prettier.useTabs": false, // 缩进不使用tab，使用空格
+  "prettier.tabWidth": 2, // tab宽度
+  "prettier.printWidth": 120, // 超过最大值换行
+  "prettier.singleQuote": true, // 使用单引号代替双引号
+  "prettier.trailingComma": "none", // 在对象或数组最后一个元素后面是否加逗号（在ES5中加尾逗号）
+  "prettier.arrowParens": "avoid", // (x) => {} 箭头函数参数只有一个时是否要有小括号。avoid：省略括号
   /* ---prettier配置End--- */
   /* ---eslint配置Begin--- */
   "eslint.run": "onType",
   "eslint.options": {
     "extensions": [".js", ".vue"]
   },
-  "eslint.validate": ["html", "javascript", "vue"]
+  "eslint.validate": ["html", "javascript", "vue"],
   /* ---eslint配置End--- */
+  /* ---stylelint配置Begin--- */
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": ["css", "less", "sass", "scss", "postcss", "vue"]
+  /* ---stylelint配置End--- */
 }

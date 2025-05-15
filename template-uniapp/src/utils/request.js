@@ -1,60 +1,66 @@
-import { createService } from 'uni-io'
-import { network } from '@/config/index'
-import store from '@/store/index'
+import uniAjax from 'uni-ajax'
+import { network } from '@/config'
+import { useUserStore } from '@/stores/user'
 
-const service = createService({
+const service = uniAjax.create({
   baseURL: network.baseURL,
   timeout: network.timeout
 })
 
 // 请求拦截
-service.interceptors.request.use(config => {
-  // 请求前，附加token到header上
-  const token = store.state.user.token || uni.getStorageSync('token')
-  if (token) {
-    config.header['Authorization'] = token || ''
+service.interceptors.request.use(
+  config => {
+    const userStore = useUserStore()
+    const token = userStore.token
+    if (token) {
+      config.header.Authorization = token
+    }
+    return config
+  },
+  error => {
+    return Promise.reject(error)
   }
-  return config
-})
+)
 
 // 响应拦截
 service.interceptors.response.use(
+  // 处理响应成功情况
   response => {
-    // 响应成功处理
-    const { data } = response
-    // 自定义响应码处理
-    switch (data.code) {
+    const { code, message, data } = response.data
+    const userStore = useUserStore()
+    // 处理自定义响应状态码
+    switch (code) {
+      // 响应正常返回响应数据
       case 200:
-        // 响应正常返回响应数据
         return data
+      // 处理token无效情况
       case 401:
-        // token无效处理
-        store.dispatch('user/logout')
-        uni.showToast({
-          title: '请先登录',
-          icon: 'error'
-        })
+        uni.showToast({ title: '请先登录', icon: 'error' })
+        userStore.clear()
+        setTimeout(() => {
+          uni.reLaunch({ url: '/pages/index' })
+        }, 500)
         break
       default:
         uni.hideLoading()
         uni.showModal({
-          title: 'Error: ' + data.code,
-          content: '系统错误，请联系管理员：' + data.message,
+          title: 'Error: ' + (code || 'Unknown'),
+          content: message,
           showCancel: false
         })
     }
-    return Promise.reject(data.message || 'Error')
+    return Promise.reject(message || 'Response Error')
   },
+  // 处理网络超时或http状态码非2xx情况
   error => {
-    // 网络超时或http状态码非200处理
-    const message = error.data || error.errMsg
+    const { statusCode, errMsg } = error
     uni.hideLoading()
     uni.showModal({
-      title: '温馨提示',
-      content: '系统错误，请联系管理员：' + message,
+      title: 'Error: ' + (statusCode || 'Unknown'),
+      content: errMsg,
       showCancel: false
     })
-    return Promise.reject(message)
+    return Promise.reject(errMsg || 'Network Error')
   }
 )
 

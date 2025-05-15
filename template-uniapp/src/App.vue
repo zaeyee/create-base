@@ -1,18 +1,41 @@
-<script>
-export default {
-  onLaunch: function () {
-    console.log('App Launch')
-  },
-  onShow: function () {
-    console.log('App Show')
-  },
-  onHide: function () {
-    console.log('App Hide')
-  }
-}
+<script setup>
+onLaunch(() => {
+  console.log('App Launch')
+})
+
+onShow(() => {
+  console.log('App Show')
+})
+
+onHide(() => {
+  console.log('App Hide')
+})
 </script>
 
-<style lang="scss">
-// 全局样式
-@import './styles/index';
+<style>
+page,
+view,
+text,
+image,
+label,
+input,
+button,
+textarea,
+swiper,
+swiper-item {
+  box-sizing: border-box;
+}
+
+image {
+  vertical-align: middle;
+  will-change: transform;
+}
+
+button {
+  line-height: 1.5 !important;
+}
+
+button::after {
+  display: none;
+}
 </style>

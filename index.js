@@ -15,18 +15,18 @@ const FRAMEWORKS = [
     name: 'vue',
     color: green,
     variants: [
-      // { name: 'vue', color: gray },
-      { name: 'vue3', color: cyan },
-      { name: 'vue3-ts', color: magenta }
+      // { name: 'vue2', color: gray },
+      // { name: 'vue', color: cyan },
+      { name: 'vue-ts', color: magenta }
     ]
   },
   {
     name: 'uniapp',
     color: yellow,
     variants: [
-      // { name: 'uniapp', color: gray },
-      { name: 'uniapp-vue3', color: cyan },
-      { name: 'uniapp-vue3-ts', color: magenta }
+      // { name: 'uniapp-vue2', color: gray },
+      // { name: 'uniapp', color: cyan },
+      { name: 'uniapp-ts', color: magenta }
     ]
   }
   // {

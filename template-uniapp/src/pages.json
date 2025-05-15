@@ -7,16 +7,15 @@
   },
   "pages": [
     {
-      "path": "pages/index/index",
-      "style": {
-        "navigationBarTitleText": "uni-app"
-      }
+      "path": "pages/index",
+      "style": { "navigationBarTitleText": "uni-app" }
     }
   ],
   "easycom": {
     "autoscan": true,
     "custom": {
-      "^c-(.*)": "@/components/common/c-$1.vue"
+      "^b-(.*)": "@/components/b-$1.vue",
+      "^c-(.*)": "@/components/c-$1.vue"
     }
   }
 }

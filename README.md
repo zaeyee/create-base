@@ -6,15 +6,15 @@
 
 ### 仍在更新的模板
 
-- `vue3`：基于 vite+vue3 的模板
-- `vue3-ts`：基于 vite+vue3+typescript 的模板
-- `uniapp-vue3`：基于 vite+vue3 的 uni-app 模板
-- `uniapp-vue3-ts`：基于 vite+vue3+typescript 的 uni-app 模板
+- `vue-ts`：基于 vite+vue3+typescript 的模板
+- `uniapp-ts`：基于 vite+vue3+typescript 的 uni-app 模板
 
 ### 不再支持的模板
 
-- `vue`：基于 webpack+vue2 的模板
-- `uniapp`：基于 webpack+vue2 的 uni-app 模板
+- `vue2`：基于 webpack+vue2 的模板
+- `vue`：基于 vite+vue3 的模板
+- `uniapp-vue2`：基于 webpack+vue2 的 uni-app 模板
+- `uniapp`：基于 vite+vue3 的 uni-app 模板
 - `admin-element`：基于 vite+vue3+Element-plus 的管理后台模板
 
 ### 使用方法

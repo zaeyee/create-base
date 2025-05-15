@@ -1,8 +1,12 @@
-import Vue from 'vue'
 import App from './App.vue'
+import router from './router'
 
-Vue.config.productionTip = false
+import 'normalize.css/normalize.css' // CSS重置方案
+import './styles/index.scss' // 全局样式
 
-new Vue({
-  render: h => h(App)
-}).$mount('#app')
+const app = createApp(App)
+const pinia = createPinia()
+
+app.use(router)
+app.use(pinia)
+app.mount('#app')
