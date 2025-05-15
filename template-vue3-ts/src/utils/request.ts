@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { network } from '@/config'
+import { network } from '@/config/index'
 import { useUserStore } from '@/stores/user'
 
 const service = axios.create({
@@ -10,16 +10,14 @@ const service = axios.create({
 // 请求拦截器
 service.interceptors.request.use(
   config => {
-    // 请求前，附加token到headers上
     const userStore = useUserStore()
     const token = userStore.token || localStorage.getItem('token')
     if (token) {
-      config.headers['Authorization'] = token || ''
+      config.headers['Authorization'] = token
     }
     return config
   },
   error => {
-    // 处理请求错误
     return Promise.reject(error)
   }
 )
@@ -27,15 +25,15 @@ service.interceptors.request.use(
 // 响应拦截器
 service.interceptors.response.use(
   response => {
-    const { data } = response
+    const { code, data, msg } = response.data
     const userStore = useUserStore()
     // 处理自定义响应状态码
-    switch (data.status_code) {
+    switch (code) {
       case 200:
         // 响应正常返回响应数据
         return data
       case 401:
-        // 处理token无效情况
+        // 处理 token 无效情况
         userStore.clear()
         console.log('token无效')
         break
@@ -44,10 +42,10 @@ service.interceptors.response.use(
         console.log('服务器错误')
         break
     }
-    return Promise.reject(data.message || 'Error')
+    return Promise.reject(msg || 'Error')
   },
   error => {
-    // 处理网络超时或http状态码非200
+    // 处理网络超时或 http 状态码非 2xx 情况
     return Promise.reject(error)
   }
 )

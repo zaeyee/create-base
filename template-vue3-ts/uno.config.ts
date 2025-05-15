@@ -1,16 +1,8 @@
-import {
-  defineConfig,
-  presetUno,
-  presetAttributify,
-  presetIcons,
-  transformerDirectives,
-  transformerVariantGroup
-} from 'unocss'
+import { defineConfig, presetWind3, presetIcons, transformerDirectives, transformerVariantGroup } from 'unocss'
 
 export default defineConfig({
   presets: [
-    presetUno(),
-    presetAttributify(),
+    presetWind3(),
     presetIcons({
       extraProperties: {
         display: 'inline-block',

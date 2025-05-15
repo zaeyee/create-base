@@ -12,30 +12,7 @@
 
 ## 代码规范依赖说明
 
-> - [eslint](https://zh-hans.eslint.org/)：ESLint 规范 js 代码
-> - [prettier](https://prettier.io/)：Prettier 美化代码
-> - [@zaeyee/eslint-config](https://github.com/zaeyee/eslint-config)：Zaeyee 的 eslint + prettier 配置
-
-## 安装依赖包
-
-```shell
-pnpm i
-```
-
-### 启动开发服务器
-
-```shell
-pnpm dev
-```
-
-### 为生产环境构建产物
-
-```shell
-pnpm build
-```
-
-### 本地预览生产构建产物
-
-```shell
-pnpm preview
-```
+> - [ESLint](https://zh-hans.eslint.org/)：代码质量规范
+> - [Prettier](https://prettier.io/)：代码格式化
+> - [@unocss/eslint-config](https://github.com/unocss/unocss/tree/main/packages/eslint-config#readme)：UnoCSS 的 ESLint 配置
+> - [@zaeyee/eslint-config](https://github.com/zaeyee/eslint-config)：Zaeyee 的 ESLint + Prettier 配置（Vue + TS）
