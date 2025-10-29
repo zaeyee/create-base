@@ -1,5 +1,5 @@
 import uniAjax from 'uni-ajax'
-import { network } from '@/config'
+import { network } from '@/config/app'
 import { useUserStore } from '@/stores/user'
 
 declare module 'uni-ajax' {
