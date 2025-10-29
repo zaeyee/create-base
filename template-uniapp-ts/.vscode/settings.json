@@ -6,16 +6,17 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
-  "eslint.options": {
-    "extensions": [".js", ".vue"]
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "tsconfig.json": "tsconfig.*.json, *.d.ts",
+    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .prettier*, prettier*, .editorconfig, .gitignore",
+    "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*"
   },
-  "eslint.validate": ["html", "javascript", "vue"],
   "prettier.semi": false,
   "prettier.useTabs": false,
   "prettier.tabWidth": 2,
   "prettier.printWidth": 120,
   "prettier.singleQuote": true,
   "prettier.trailingComma": "none",
-  "prettier.arrowParens": "avoid",
-  "i18n-ally.localesPaths": [""]
+  "prettier.arrowParens": "avoid"
 }
