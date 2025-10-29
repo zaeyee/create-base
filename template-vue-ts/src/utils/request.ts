@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { network } from '@/config/index'
+import { network } from '@/config/app'
 import { useUserStore } from '@/stores/user'
 
 const service = axios.create({

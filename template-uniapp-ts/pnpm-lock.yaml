@@ -87,9 +87,6 @@ importers:
       '@types/node':
         specifier: ^24.9.2
         version: 24.9.2
-      '@unocss/eslint-config':
-        specifier: ^66.5.4
-        version: 66.5.4(eslint@9.38.0(jiti@2.6.1))(typescript@5.9.3)
       '@vue/runtime-core':
         specifier: ^3.5.22
         version: 3.5.22

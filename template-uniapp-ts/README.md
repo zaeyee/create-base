@@ -9,7 +9,6 @@
 
 ## 代码规范依赖说明
 
-> - [ESLint](https://zh-hans.eslint.org/)：规范 js 代码
-> - [Prettier](https://prettier.io/)：格式化代码
-> - [@unocss/eslint-config](https://github.com/unocss/unocss/tree/main/packages/eslint-config#readme)：UnoCSS 的 ESLint 配置
+> - [ESLint](https://zh-hans.eslint.org/)：代码质量规范
+> - [Prettier](https://prettier.io/)：代码格式化
 > - [@zaeyee/eslint-config](https://github.com/zaeyee/eslint-config)：Zaeyee 的 ESLint + Prettier 配置（Vue + TS）
