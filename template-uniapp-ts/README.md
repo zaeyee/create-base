@@ -1,4 +1,4 @@
-# Template-UniApp-Vue3-TS
+# Template-UniApp-TS
 
 ## 项目主要依赖说明
 

@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@zaeyee/eslint-config-base": "^0.3.0",
-    "eslint": "^8.43.0",
-    "prettier": "^2.8.8"
+    "eslint": "^8.57.1",
+    "prettier": "^3.6.2"
   }
 }

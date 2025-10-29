@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { defineConfig } from 'vite'
 import path from 'path'
 import uni from '@dcloudio/vite-plugin-uni'
@@ -12,13 +13,11 @@ export default defineConfig({
     }
   },
   plugins: [
+    // @ts-expect-error
     uni.default(),
     AutoImport({
       imports: ['vue', 'pinia', 'uni-app'],
-      dts: true,
-      eslintrc: {
-        enabled: true
-      }
+      dts: true
     }),
     UnoCSS()
   ]
